@@ -6,5 +6,6 @@
 
 module purge
 module load Python
-
-python AtomsCavityBasisDemo.py
+python -m cProfile -o output.pstats AtomsCavityBasisDemo.py
+gprof2dot --colour-nodes-by-selftime -f pstats output.pstats | \
+    dot -Tpng -o output.png
