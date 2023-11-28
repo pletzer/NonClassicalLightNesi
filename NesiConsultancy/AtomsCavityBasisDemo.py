@@ -25,10 +25,10 @@ args = parser.parse_args()
 configs = configparser.ConfigParser()
 conffile = args.conffile
 try:
-    with open() as f:
+    with open(conffile) as f:
         configs.read_file(conffile)
 except IOError:
-    raise RuntimeError(f'Config file {confifile} does not exist!')
+    raise RuntimeError(f'Config file {conffile} does not exist!')
 
 # Assign parameters
 eps = configs['PARAMS'].getfloat('eps')
