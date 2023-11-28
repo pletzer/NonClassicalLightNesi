@@ -26,7 +26,7 @@ configs = configparser.ConfigParser()
 conffile = args.conffile
 try:
     with open(conffile) as f:
-        configs.read_file(conffile)
+        configs.read(conffile)
 except IOError:
     raise RuntimeError(f'Config file {conffile} does not exist!')
 
