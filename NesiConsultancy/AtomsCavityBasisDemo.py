@@ -11,10 +11,24 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 import configparser
+import argparse
+import sys
+
+parser = argparse.ArgumentParser(
+                    prog=sys.argv[0],
+                    description='NeSI test case')
+parser.add_argument('-c', '--conffile', default='config.ini',
+                    help='Path to the configuration file')
+args = parser.parse_args()
 
 #%% Read in configs
 configs = configparser.ConfigParser()
-configs.read('config.ini')
+conffile = args.conffile
+try:
+    with open() as f:
+        configs.read_file(conffile)
+except IOError:
+    raise RuntimeError(f'Config file {confifile} does not exist!')
 
 # Assign parameters
 eps = configs['PARAMS'].getfloat('eps')
