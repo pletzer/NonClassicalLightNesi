@@ -1,0 +1,30 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+  push:
+
+env:
+  CONTAINER_NAME: esmfenv83
+
+jobs:
+  build-test-container:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    name: Build Container
+    steps:
+
+      - name: Install python and dependencies
+        run: |
+          sudo apt update -y
+          sudo apt install python3.11
+          pip install -r requirements.txt
+
+      - uses: actions/checkout@v3
+
+      - name: Run tests
+        working-directory: ./conf
+        run: |
+          pytest
