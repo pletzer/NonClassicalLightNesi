@@ -1,2 +1,9 @@
 # NonClassicalLightNesi
-Didn't read lol
+
+
+## How to run tests
+
+```
+pytest
+```
+
