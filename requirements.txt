@@ -1,5 +1,5 @@
 matplotlib>=3.8.2
-numpy>=1.25.2 @ file:///scale_wlg_persistent/filesets/opt_nesi/CS400_centos7_bdw/easybuild-resources/build/Python/3.11.6/foss-2023a/numpy/numpy-1.25.2
-qutip>=4.7.3 @ file:///scale_wlg_persistent/filesets/opt_nesi/CS400_centos7_bdw/easybuild-resources/build/Python/3.11.6/foss-2023a/qutip/qutip-4.7.3
+numpy>=1.25.2
+qutip>=4.7.3
 scipy>=1.11.3
 pytest>=7.4.3
