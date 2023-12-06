@@ -1,0 +1,18 @@
+
+The following modules were not unloaded:
+   (Use "module --force purge" to unload all):
+
+  1) XALT/minimal   2) slurm   3) NeSI
+Cavity mode commutator = 1.0
+10.0%. Run time:   0.34s. Est. time left: 00:00:00:03
+20.0%. Run time:   0.67s. Est. time left: 00:00:00:02
+30.0%. Run time:   1.00s. Est. time left: 00:00:00:02
+40.0%. Run time:   1.33s. Est. time left: 00:00:00:02
+50.0%. Run time:   1.66s. Est. time left: 00:00:00:01
+60.0%. Run time:   2.02s. Est. time left: 00:00:00:01
+70.0%. Run time:   3.13s. Est. time left: 00:00:00:01
+80.0%. Run time:   4.27s. Est. time left: 00:00:00:01
+90.0%. Run time:   5.41s. Est. time left: 00:00:00:00
+Total run time:   6.54s
+Time taken till solver = 34.18s.
+Total time taken = 58.58s.
