@@ -24,7 +24,5 @@ should start with `test_`.
 File `.github/workflows/ci.yml` instructs github to build the code (install Python and dependencies) and run the unit tests each time 
 a change is pushed to the repository. The output of the tests can be found under the "Actions" tab, e.g. <https://github.com/aell060/NonClassicalLightNesi/actions>.
 
-![CI results]
-(https://github.com/aell060/NonClassicalLightNesi/actions/workflows/ci.yml/badge.svg) 
-
+![CI results](https://github.com/aell060/NonClassicalLightNesi/actions/workflows/ci.yml/badge.svg)
 
