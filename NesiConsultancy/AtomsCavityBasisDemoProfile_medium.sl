@@ -1,11 +1,10 @@
 #!/bin/bash -e
 #SBATCH --job-name=AtomsCavityBasisDemo # job name (shows up in the queue)
-#SBATCH --time=0:10:00      # Walltime (HH:MM:SS)
-#SBATCH --mem=5GB          # Memory in MB
-#SBATCH --qos=debug          # debug QOS for high priority job tests
+#SBATCH --time=0:20:00      # Walltime (HH:MM:SS)
+#SBATCH --mem=10GB          # Memory in MB
+#SBATCH --cpus-per-task=8
 
 module purge
 module load Python
-python -m cProfile -o output.pstats AtomsCavityBasisDemo.py -c ./Configs/mediumconfig.ini
-gprof2dot --colour-nodes-by-selftime -f pstats output.pstats | \
-    dot -Tpng -o output_medium.png
+module load forge
+srun map --profile python AtomsCavityBasisDemo.py -c ./Configs/mediumconfig.ini
